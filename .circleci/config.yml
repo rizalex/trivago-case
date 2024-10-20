@@ -8,7 +8,7 @@ jobs:
       - image: cimg/openjdk:latest
     steps:
       - setup_remote_docker:
-          version: 20.10.7
+          # version: 20.10.7
           docker_layer_caching: true
       - run:
           name: Docker Login
@@ -31,7 +31,7 @@ jobs:
       - image: cimg/openjdk:latest
     steps:
       - setup_remote_docker:
-          version: 20.10.7
+          # version: 20.10.7
           docker_layer_caching: true
       - run:
           name: Docker Login

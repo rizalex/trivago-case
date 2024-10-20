@@ -5,7 +5,7 @@ version: 2.1
 jobs:
   message_1:
     docker:
-      - image: circleci/openjdk:latest
+      - image: cimg/openjdk:23.0.0
     steps:
       # Replace this with a real test runner invocation
       - run:
@@ -21,7 +21,7 @@ jobs:
 
   message_2:
     docker:
-      - image: circleci/openjdk:latest
+      - image: cimg/openjdk:23.0.0
     steps:
       - run:
           name: hello world

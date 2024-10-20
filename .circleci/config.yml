@@ -7,6 +7,13 @@ jobs:
     docker:
       - image: cimg/openjdk:latest
     steps:
+      - setup_remote_docker:
+          version: 20.10.7
+          docker_layer_caching: true
+      - run:
+          name: Docker Login
+          command: |
+            echo $DOCKER_HUB_PASSWORD | docker login -u $DOCKER_HUB_USERNAME --password-stdin
       # Replace this with a real test runner invocation
       - run:
           name: hello world
@@ -23,6 +30,13 @@ jobs:
     docker:
       - image: cimg/openjdk:latest
     steps:
+      - setup_remote_docker:
+          version: 20.10.7
+          docker_layer_caching: true
+      - run:
+          name: Docker Login
+          command: |
+            echo $DOCKER_HUB_PASSWORD | docker login -u $DOCKER_HUB_USERNAME --password-stdin
       - run:
           name: hello world
           command: |

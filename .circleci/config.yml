@@ -11,7 +11,7 @@ jobs:
       - run:
           name: hello world
           command: |
-            echo 'public class Main { public static void main(String[] args) { System.out.println("There\'s no such thing as a bad day when you\'re fishing"); } }' > App1.java
+            echo 'public class App1 { public static void main(String[] args) { System.out.println("There\'s no such thing as a bad day when you\'re fishing"); } }' > App1.java
       - run:
           name: Compile Java Program
           command: javac App1.java
@@ -26,7 +26,7 @@ jobs:
       - run:
           name: hello world
           command: |
-            echo 'public class Main { public static void main(String[] args) { System.out.println("When in doubt, fish!"); } }' > App2.java
+            echo 'public class App2 { public static void main(String[] args) { System.out.println("When in doubt, fish!"); } }' > App2.java
       - run:
           name: Compile Java Program
           command: javac App2.java

@@ -5,7 +5,7 @@ version: 2.1
 jobs:
   message_1:
     docker:
-      - image: cimg/openjdk::15.0
+      - image: cimg/openjdk:15.0
     steps:
       - setup_remote_docker:
           # version: 20.10.7
@@ -28,7 +28,7 @@ jobs:
 
   message_2:
     docker:
-      - image: cimg/openjdk::15.0
+      - image: cimg/openjdk:15.0
     steps:
       - setup_remote_docker:
           # version: 20.10.7

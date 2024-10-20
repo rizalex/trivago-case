@@ -18,7 +18,7 @@ jobs:
       - run:
           name: Docker Login
           command: |
-            echo $DOCKER_HUB_PASSWORD | docker login -u $DOCKER_HUB_USERNAME --password-stdin
+            echo $DOCKER_HUB_PASSWORD | docker login -u rizalex --password-stdin
       # Replace this with a real test runner invocation
       - run:
           name: hello world

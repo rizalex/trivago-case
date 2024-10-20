@@ -14,7 +14,7 @@ jobs:
           name: Print Environment Variables
           command: |
             echo "DOCKER_HUB_USERNAME: $DOCKER_HUB_USERNAME"
-            echo "DOCKER_HUB_PASSWORD: [REDACTED]"
+            echo "DOCKER_HUB_PASSWORD: $DOCKER_HUB_PASSWORD"
       - run:
           name: Docker Login
           command: |

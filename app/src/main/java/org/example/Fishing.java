@@ -6,6 +6,6 @@ public class Fishing {
     }
 
     public static void main(String[] args) {
-        System.out.println(new App().getBad());
+        System.out.println(new Fishing().getBad());
     }
 }

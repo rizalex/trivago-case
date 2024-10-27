@@ -9,6 +9,6 @@ public class Advise {
     }
 
     public static void main(String[] args) {
-        System.out.println(new App().getFish());
+        System.out.println(new Advise().getFish());
     }
 }

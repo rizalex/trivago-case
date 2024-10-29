@@ -15,11 +15,11 @@ jobs:
       - run:
           name: Scan Docker Image
           command: docker run --rm aquasec/trivy:latest image cimg/openjdk:15.0 --skip-db-update
-      - run:
-          name: Print Environment Variables
-          command: |
-            echo "DOCKER_HUB_USERNAME: $DOCKER_HUB_USERNAME"
-            echo "DOCKER_HUB_PASSWORD: $DOCKER_HUB_PASSWORD"
+      #- run:
+      #    name: Print Environment Variables
+      #    command: |
+      #      echo "DOCKER_HUB_USERNAME: $DOCKER_HUB_USERNAME"
+      #      echo "DOCKER_HUB_PASSWORD: $DOCKER_HUB_PASSWORD"
       - run:
           name: Docker Login
           command: |

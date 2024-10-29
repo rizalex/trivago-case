@@ -13,8 +13,7 @@ jobs:
           docker_layer_caching: true
       - run:
           name: Scan Docker Image
-          command: docker run --rm -e GITHUB_TOKEN=$GITHUB_TOKEN -v trivy-cache:/root/.cache/ -v /var/run/docker.sock:/var/run/docker.sock aquasec/trivy:latest image cimg/openjdk:15.0
-
+          command: docker run --rm -e GITHUB_TOKEN=$GITHUB_TOKEN -v trivy-cache:/root/.cache/ -v /var/run/docker.sock:/var/run/docker.sock aquasec/trivy:latest image --exit-code 1 --severity CRITICAL,HIGH cimg/openjdk:15.0
       - run:
           name: Docker Login
           command: |

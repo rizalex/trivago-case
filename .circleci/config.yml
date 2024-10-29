@@ -9,12 +9,12 @@ jobs:
       - image: aquasec/trivy:latest
     steps:
       - setup_remote_docker:
-          # version: 20.10.7
+          version: default
           docker_layer_caching: true
       # - run: ./gradlew build
       - run:
           name: Scan Docker Image
-          command: docker run --rm aquasec/trivy:latest image cimg/openjdk:15.0
+          command: docker run --rm aquasec/trivy:latest image cimg/openjdk:15.0 --skip-db-update
       - run:
           name: Print Environment Variables
           command: |
@@ -46,7 +46,7 @@ jobs:
       # - run: ./gradlew build
       - run:
           name: Scan Docker Image
-          command: docker run --rm aquasec/trivy:latest image cimg/openjdk:15.0
+        #  command: docker run --rm aquasec/trivy:latest image cimg/openjdk:15.0
       - run:
           name: Docker Login
           command: |
@@ -63,7 +63,7 @@ jobs:
           command: java App2
 
 workflows:
-  version: 2
+#  version: 2
   print_messages:
     jobs:
       - message_1

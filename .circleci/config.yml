@@ -13,7 +13,7 @@ jobs:
           docker_layer_caching: true
       - run:
           name: Scan Docker Image
-          command: trivy image aquasec/trivy:latest --skip-db-update
+          command: docker run --rm aquasec/trivy:latest image cimg/openjdk:15.0 --skip-db-update
       #- run:
       #    name: Print Environment Variables
       #    command: |
@@ -25,7 +25,7 @@ jobs:
             echo $DOCKER_HUB_PASSWORD | docker login -u $DOCKER_HUB_USERNAME --password-stdin
       # Replace this with a real test runner invocation
       - run:
-          name: hello world
+          name: Do Code
           command: |
             echo 'public class App1 { public static void main(String[] args) { System.out.println("There'\''s no such thing as a bad day when you'\''re fishing"); } }' > App1.java
       - run:
@@ -47,7 +47,7 @@ jobs:
           command: |
             echo $DOCKER_HUB_PASSWORD | docker login -u $DOCKER_HUB_USERNAME --password-stdin
       - run:
-          name: hello world
+          name: Do Code
           command: |
             echo 'public class App2 { public static void main(String[] args) { System.out.println("When in doubt, fish!"); } }' > App2.java
       - run:
